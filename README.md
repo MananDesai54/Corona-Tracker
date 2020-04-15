@@ -1,2 +1,3 @@
 # Corona-Tracker
-Using JavaScript and Mapbox Js Gl Api
+Using JavaScript and Mapbox Js GL Api
+Updating.......
