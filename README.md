@@ -1,3 +1,3 @@
 # Corona-Tracker
 Using JavaScript and Mapbox Js GL Api ,
-Updating.......
+https://sleepy-davinci-249d99.netlify.app/ find it here
