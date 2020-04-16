@@ -65,7 +65,6 @@
     position: absolute;
     top: 50%;
     left: 10%;
-    transform: translate(-10%,-50%);
     height: 70%;
     width: 300px;
     background:rgba(34, 34, 34, 0.8);
@@ -174,7 +173,6 @@ scrollbar {
 .color-detail {
     position: fixed;
     top: 10px;
-    right: 10px;
     color: white;
     background: rgba(0, 0, 0, 0.8);
     padding: 10px;
@@ -190,8 +188,45 @@ scrollbar {
     width: 10px;
     border: 1px solid white;
 }
-@media(max-width:700px) {
+
+@media(min-width:680px) {
+    .color-detail {
+        right: 10px;
+    }
+    .country-stat {
+        transform: translate(-10%,-50%);
+    }
+}
+@media(max-width:679px){
+    body {
+        overflow: hidden;
+    }
+    .color-detail {
+        left:  100px;
+    }
+    #map {
+        height: 150vmax;
+        width: 100vmax;
+    }
+    .country-stat {
+        left: 30%;
+        height: 50%;
+    }
     .state {
-        left: 380px;
+        left: 30%;
+        top: 30%;
+        height: 50%;
+        width: 250px;
+    }
+}
+@media(max-height:360px) {
+    #map {
+        height: 270vmax;
+    }
+}
+@media(max-width:230px) {
+    #map {
+        height: 300vmax;
+        width: 350vmin;
     }
 }

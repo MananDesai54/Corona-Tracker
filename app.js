@@ -6,7 +6,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWFuYW5kZXNhaTU0IiwiYSI6ImNrOTFoNjRhcTAwMTAzb
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10',
-    zoom:2,
+    zoom:4,
     antialias:true,
     center:[0,0]
 });
@@ -33,7 +33,7 @@ function formatNumber(number) {
 function setNumber(number) {
     const counters = document.querySelectorAll('.section p');
     const speed = 200;
-    console.log(counters);
+
 
     counters.forEach((counter,index)=>{
         const updateCount = ()=>{
@@ -201,7 +201,7 @@ function display() {
             }else {
                 state.classList.add('b');
                 if(countries[index].areas[0].areas.length) {
-                    console.log(countries[index].areas[0].areas.length);
+
                 }
             }
 
@@ -217,7 +217,6 @@ window.addEventListener('click',(event)=>{
     let state = document.querySelector('.state');
     let country = document.querySelector('.country-stat')
     if(!(event.target===state || event.target===country || event.target.parentElement===state || event.target.parentElement===country || event.target.parentElement.parentElement===country || event.target.parentElement.parentElement===state || event.target.parentElement.parentElement.parentElement===state || event.target.parentElement.parentElement.parentElement.parentElement === state) && (state.classList.contains('b') && country.classList.contains('a'))) {
-        console.log('jnh');
         state.classList.remove('b');
         country.classList.remove('a');
     }
