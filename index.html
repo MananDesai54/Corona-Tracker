@@ -8,11 +8,46 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' />
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1b8ba3dee0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <div id='map'></div>
-    
+    <div class="color-detail">
+        <div class="color">
+            <div class="box" style="background:black;"></div>
+            <div class="color-name"> < 1000 </div>
+        </div>
+        <div class="color">
+            <div class="box" style="background:#ffb3b3;"></div>
+            <div class="color-name"> > 1000 </div>
+        </div>
+        <div class="color">
+            <div class="box" style="background:yellow;"></div>
+            <div class="color-name"> >10000 </div>
+        </div>
+        <div class="color">
+            <div class="box" style="background:orange;"></div>
+            <div class="color-name"> >100000 </div>
+        </div>
+        <div class="color">
+            <div class="box" style="background:red;"></div>
+            <div class="color-name"> >500000 </div>
+        </div>
+    </div>
+    <div class="open-stat">
+        <i class="fas fa-chart-bar fa-3x"></i>
+        <p>Details</p>
+    </div>
+    <div class="country-stat">
+        <i class="fas fa-times"></i>
+        <h2>All Countries (By Cases)</h2>
+        <p style="font-size:12px;margin:5px;">Date last updated <span></span></p>
+        <div class="show-countries"></div>
+        
+    </div>
+    <div class="state">
+    </div>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <script src="app.js"></script>
 </body>

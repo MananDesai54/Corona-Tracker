@@ -50,3 +50,148 @@
     justify-content: space-between;
     font-size: 14px;
 }
+.open-stat {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    cursor: pointer;
+}
+.open-stat p {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.country-stat {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%,-50%);
+    height: 70%;
+    width: 300px;
+    background:rgba(34, 34, 34, 0.8);
+    color: white;
+    padding: 30px;
+    overflow-y: auto;
+    opacity: 0;
+    z-index: -100;
+}
+.a {
+    animation: anime 1s ease-in forwards;
+}
+.country-stat .show-countries {
+    background: #333;
+}
+.show-countries img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.show-countries .detail {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+.show-countries .detail * {
+    pointer-events: none;
+}
+.show-countries .data {
+    flex:1 0 0;
+    margin-left: 20px;
+}
+.fa-times {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+}
+.state {
+    position: absolute;
+    top:15%;
+    height: 70%;
+    overflow-y: scroll;
+    left: 450px;
+    color: white;
+    z-index: 15;
+    padding: 20px;
+    background: #222;
+    width: 200px;
+    opacity: 0;
+    z-index: -10;
+}
+.state-title {
+    margin-bottom: 20px;
+}
+.state-detail {
+    border-top: 1px solid #333;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.state-data p:nth-of-type(1) {
+    color: orangered;
+}
+.state-data p:nth-of-type(2) {
+    color: forestgreen;
+}
+.state-data p:nth-of-type(3) {
+    color: coral;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+scrollbar {
+    display: none;
+}
+.b {
+    animation: anime2 1s ease-in forwards;
+}
+@keyframes anime {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 1;
+    }
+    100% {
+        transform: translate(-10%,-50%);
+        opacity: 1;
+        z-index: 1;
+    }
+}
+@keyframes anime2 {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+.color-detail {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-weight: bold;
+}
+.color {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box {
+    height: 10px;
+    width: 10px;
+    border: 1px solid white;
+}
+@media(max-width:700px) {
+    .state {
+        left: 380px;
+    }
+}
