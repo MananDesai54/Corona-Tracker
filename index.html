@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Corona Stats</title>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="shortcut icon" href="./image/corona.png" type="image/png">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' />
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/1b8ba3dee0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.css">
 </head>
 <body>
-    
+    <div class="how-use go" id="abcd">
+        <div class="tips">
+            <i class="fas fa-times cross"></i>
+            <h2>How to Use</h2>
+            <p>1. &nbsp;Click on any marker of country to show their details.</p>
+            <p>2. &nbsp;Click on Details to see Country wise details.</p>
+            <p>3. &nbsp;If you click on country and if that country's state's data is available then it will show state data.</p>
+            <p>4. &nbsp;Do check out social media profile. links are provided..</p>
+        </div>
+    </div>
     <div id='map'></div>
+    <div class="howtoa">
+        <a href="#abcd">How to use</a>
+    </div>
     <div class="color-detail">
         <div class="color">
             <div class="box" style="background:black;"></div>
@@ -40,13 +53,24 @@
         <p>Details</p>
     </div>
     <div class="country-stat">
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times onec"></i>
         <h2>All Countries (By Cases)</h2>
         <p style="font-size:12px;margin:5px;">Date last updated <span></span></p>
         <div class="show-countries"></div>
-        
     </div>
     <div class="state">
+    </div>
+    <div class="social-media">
+        <a href="https://www.instagram.com/webappdeveloper_/"><i class="fab fa-instagram" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;"></i></a>
+        <a href="https://twitter.com/developetheweb"><i class="fab fa-twitter" style="color: cornflowerblue;"></i></a>
+        <a href="https://www.linkedin.com/in/manan-desai-9ab441186/"><i class="fab fa-linkedin" style="color: rgb(32, 93, 206);"></i></a>
+    </div>
+    <div class="loader">
+        <div class="load rotate">
+
+        </div>
+        <p>Getting Data</p>
     </div>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <script src="app.js"></script>

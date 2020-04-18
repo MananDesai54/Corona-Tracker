@@ -56,7 +56,7 @@
     left: 20px;
     color: white;
     cursor: pointer;
-}
+} 
 .open-stat p {
     letter-spacing: 1px;
     font-size: 18px;
@@ -177,6 +177,7 @@ scrollbar {
     background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     font-weight: bold;
+    border-radius: 5px;
 }
 .color {
     display: flex;
@@ -188,13 +189,119 @@ scrollbar {
     width: 10px;
     border: 1px solid white;
 }
+.how-use {
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tips {
+    position: relative;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 400px;
+    z-index: 100000;
+}
+.tips h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cross {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.tips p {
+    margin-bottom: 5px;
+}
+.go {
+    z-index: -100;
+    opacity: 0;
+}
+.social-media {
+    position: absolute;
+    left: 20px;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+.social-media a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.howtoa {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.howtoa a {
+    text-decoration: none;
+    color: white;
+}
+.loader {
+    position: fixed;
+    z-index: 10000000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.load {
+    height: 70px;
+    width: 70px;
+    border: 10px solid #eee;
+    border-radius: 50%;
+    border-top: 10px solid red;
+}
+.rotate {
+    animation: rotate 1s ease-in infinite;
+}
+.goaway {
+    z-index: -100;
+    opacity: 0;
+}
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(359deg);
+    }
+}
 
 @media(min-width:680px) {
     .color-detail {
-        right: 10px;
+        right: 20px;
+        top: 70px;
     }
     .country-stat {
         transform: translate(-10%,-50%);
+    }
+    .social-media {
+        top: 150px;
     }
 }
 @media(max-width:679px){
@@ -202,14 +309,14 @@ scrollbar {
         overflow: hidden;
     }
     .color-detail {
-        left:  100px;
+        left:  140px;
     }
     #map {
         height: 150vmax;
         width: 100vmax;
     }
     .country-stat {
-        left: 30%;
+        left: 20%;
         height: 50%;
     }
     .state {
@@ -217,6 +324,38 @@ scrollbar {
         top: 30%;
         height: 50%;
         width: 250px;
+    }
+    .how-use .tips{
+        transform: scale(0.4);
+        font-size: 15px;
+        position: absolute;
+        top: 30%;
+        transform: translate(-30%,-30%);
+    }
+    .load {
+        position: fixed;
+        top: 28%;
+        left: 28%;
+        transform: translate(-28%,-28%);
+    }
+    .loader p {
+        position: fixed;
+        top: 35%;
+        left: 30%;
+        transform: translate(-30%,-35%);
+    }
+    .social-media {
+        flex-direction: row;
+        bottom: 10px;
+    }
+    .social-media a {
+        margin: 0 5px;
+    }
+    .color-detail {
+        transform: scale(0.8);
+    }
+    .open-stat {
+        transform: scale(0.8);
     }
 }
 @media(max-height:360px) {

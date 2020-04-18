@@ -6,9 +6,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWFuYW5kZXNhaTU0IiwiYSI6ImNrOTFoNjRhcTAwMTAzb
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10',
-    zoom:4,
+    zoom:3,
     antialias:true,
-    center:[0,0]
+    center:[79.72701263427734,22.493118286132812]
 });
 
 
@@ -129,10 +129,16 @@ function display() {
         markerArray.push(marker)
         
     });
+    let loader = document.querySelector('.loader');
+    let load = document.querySelector('.load');
+    if(markerArray.length===countries.length) {
+        load.classList.remove('rotate');
+        loader.classList.add('goaway');
+    }
     let showCountry = document.querySelector('.show-countries');
-    let showStat = document.querySelector('.fa-chart-bar');
+    let showStat = document.querySelector('.open-stat');
     let statContainer = document.querySelector('.country-stat');
-    let close = document.querySelector('.fa-times:nth-of-type(1)');
+    let close = document.querySelector('.onec');
     let update = document.querySelector('.country-stat p span');
     update.innerText = data.lastUpdated;
     update.style.color = 'orangered'
@@ -220,4 +226,16 @@ window.addEventListener('click',(event)=>{
         state.classList.remove('b');
         country.classList.remove('a');
     }
+})
+
+let howtoa = document.querySelector('.howtoa');
+let openhow = document.querySelector('.how-use');
+let howclose = document.querySelector('.cross');
+
+howtoa.addEventListener('click',()=>{
+    openhow.classList.remove('go');
+})
+
+howclose.addEventListener('click',()=>{
+    openhow.classList.add('go');
 })
